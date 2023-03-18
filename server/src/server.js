@@ -1,3 +1,5 @@
+import "./db";
+import "./models/Color";
 import express from "express";
 import cors from "cors";
 import rootRouter from "./router/rootRouter";
