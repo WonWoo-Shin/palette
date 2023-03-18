@@ -1,26 +1,15 @@
-import { Reset } from "styled-reset";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Home from "./components/Home";
-import Login from "./components/Login";
+import { useEffect, useState } from "react";
+import { fetchDefaultColor } from "./api";
 
 function App() {
-  return (
-    <>
-      <Reset />
-      <Header />
-      <Router>
-        <Switch>
-          <Route path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/login">
-            <Login></Login>
-          </Route>
-        </Switch>
-      </Router>
-    </>
-  );
+  const [myData, setMyData] = useState("");
+  console.log(fetchDefaultColor());
+
+  useEffect(() => {
+    fetchDefaultColor();
+  }, []);
+
+  return <div></div>;
 }
 
 export default App;
