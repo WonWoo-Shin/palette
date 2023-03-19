@@ -1,15 +1,25 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
-import { fetchDefaultColor } from "./api";
 
 function App() {
-  const [myData, setMyData] = useState("");
-  console.log(fetchDefaultColor());
+  const [colors, setColors] = useState(null);
+
+  const fetchDefaultColor = async () => {
+    const fetchColors = await axios.get(
+      "http://localhost:4000/api/defaultColor"
+    );
+    setColors(fetchColors.data);
+  };
 
   useEffect(() => {
     fetchDefaultColor();
   }, []);
 
-  return <div></div>;
+  return colors === null ? (
+    <div>Loading...</div>
+  ) : (
+    <div>{colors[0].colorName}</div>
+  );
 }
 
 export default App;

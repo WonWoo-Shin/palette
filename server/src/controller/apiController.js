@@ -1,5 +1,6 @@
-export const getDefaultColor = (req, res) =>
-  res.send([
-    { colorName: "tomato", colorCode: "#FF6347" },
-    { colorName: "teal", colorCode: "#008080" },
-  ]);
+import Color from "../models/Color";
+
+export const getDefaultColor = async (req, res) => {
+  const defaultColor = await Color.find({});
+  return res.send(defaultColor);
+};

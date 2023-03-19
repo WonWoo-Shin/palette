@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 
 const colorSchema = new mongoose.Schema({
-  ColorName: String,
-  ColorCode: String,
+  colorName: String,
+  colorCode: String,
 });
 
-const colorModel = mongoose.model("Color", colorSchema);
+const Color = mongoose.model("Color", colorSchema);
 
-export default colorModel;
+export default Color;

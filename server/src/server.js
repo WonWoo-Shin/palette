@@ -2,7 +2,7 @@ import "./db";
 import "./models/Color";
 import express from "express";
 import cors from "cors";
-import rootRouter from "./router/rootRouter";
+import rootRouter from "./routes/rootRouter";
 import apiRouter from "./routes/apiRouter";
 
 const app = express();
