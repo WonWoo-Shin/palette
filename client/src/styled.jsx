@@ -16,7 +16,7 @@ export const Wrap = styled.main`
 export const LeftMenu = styled.div`
   width: 150px;
   height: calc(100vh - 50px);
-  background-color: whitesmoke;
+  border-right: 2px solid #e4e4e4; ;
 `;
 
 export const Colors = styled.div`
