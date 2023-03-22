@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderBar = styled.header`
-  height: 50px;
+  height: 100px;
   border-bottom: 2px solid #e4e4e4;
   display: flex;
   align-items: center;
@@ -14,17 +14,22 @@ export const Wrap = styled.main`
 `;
 
 export const LeftMenu = styled.div`
-  width: 150px;
-  height: calc(100vh - 50px);
+  width: 200px;
+  height: calc(100vh - 100px);
   border-right: 2px solid #e4e4e4; ;
 `;
 
 export const Colors = styled.div`
+  width: calc(100% - 200px);
+  padding: 10px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 `;
 
 export const ColorBoard = styled.div`
-  width: 100px;
+  width: 200px;
   height: 300px;
+  margin: 10px;
   background-color: ${(props) => props.backgroud};
 `;
