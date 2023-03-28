@@ -7,8 +7,8 @@ import Menu from "./components/Menu";
 function App() {
   return (
     <>
-      <Header />
       <Wrap>
+        <Header />
         <Menu />
         <Main />
       </Wrap>
