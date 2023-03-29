@@ -26,8 +26,8 @@ export const Colors = styled.div`
 `;
 
 export const ColorBoard = styled.div`
-  width: 200px;
-  height: 300px;
+  width: 150px;
+  height: 200px;
   background-color: ${(props) => props.backgroud};
   border-radius: 50px;
   display: flex;
@@ -36,5 +36,19 @@ export const ColorBoard = styled.div`
   transition: all 0.1s ease-in-out;
   &:hover {
     transform: scale(1.05);
+  }
+  div {
+    width: 100%;
+    height: 40%;
+    padding: 10px;
+    background-color: #efeff1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    span {
+      font-size: 18px;
+      font-weight: 600;
+      color: #222222;
+    }
   }
 `;

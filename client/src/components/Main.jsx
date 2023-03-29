@@ -23,7 +23,10 @@ function Main() {
             key={color._id}
             onClick={() => copyCode(color.colorCode, color._id)}
           >
-            <span>{color.colorName}</span>
+            <div>
+              <span>{color.colorName}</span>
+              <span>{color.colorCode}</span>
+            </div>
           </ColorBoard>
         ))
       )}
