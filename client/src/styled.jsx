@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrap = styled.main`
   height: 100vh;
   display: grid;
-  grid-template: 50px 1fr / 150px 1fr;
+  grid-template: 80px 1fr / 200px 1fr;
 `;
 
 export const HeaderBar = styled.header`
@@ -16,7 +16,7 @@ export const HeaderBar = styled.header`
 `;
 
 export const LeftMenu = styled.div`
-  border-right: 2px solid #e4e4e4; ;
+  border-right: 2px solid #e4e4e4;
 `;
 
 export const Colors = styled.div`
@@ -34,21 +34,35 @@ export const ColorBoard = styled.div`
   justify-content: center;
   align-items: center;
   transition: all 0.1s ease-in-out;
+  position: relative;
   &:hover {
     transform: scale(1.05);
   }
-  div {
-    width: 100%;
-    height: 40%;
-    padding: 10px;
-    background-color: #efeff1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    span {
-      font-size: 18px;
-      font-weight: 600;
-      color: #222222;
-    }
+`;
+
+export const ColorInfo = styled.div`
+  width: 100%;
+  height: 40%;
+  padding: 10px;
+  background-color: #efeff1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  span {
+    font-size: 18px;
+    color: #222222;
+    font-family: "Alkatra", cursive;
+  }
+`;
+
+export const Copied = styled(ColorInfo)`
+  background-color: #222222;
+  position: absolute;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  span {
+    font-size: 25px;
+    color: white;
   }
 `;
